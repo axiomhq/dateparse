@@ -1782,7 +1782,7 @@ iterRunes:
 			p.format = []byte("2006")
 			return p, nil
 		} else if len(datestr) < 4 {
-			return nil, fmt.Errorf("unrecognized format, too short %v", datestr)
+			return nil, fmt.Errorf("unrecognized format, too short %q", datestr)
 		}
 		if !t.IsZero() {
 			if loc == nil {
